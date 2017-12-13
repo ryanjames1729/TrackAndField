@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://bootswatch.com/4/sandstone/bootstrap.min.css" >
+    <script type="text/javascript" src="code.js"></script>
+    
+    <title>Blood Rock 100</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1 style="color:gold; font-size:32px">Altamont Track and Field Calculator</h1>
+      </div>
+    </div>
+    <h1 id="timer" style="text-align:center; font-size:40px">00:00.00</h1>
+    <div class="container">
+      <p><strong>Instructions:</strong> to use this spreadsheet, first click on the column heading for which distance your runners are going to be timed on.
+      Then click on the start button to start the time. As each student finishes their distance, click on their name and it will record their time and calculate
+    predicted splits for the remaining distances.</p>
+  </div>
+    <p style="text-align:center"> <br>
+    <button type="button" class="btn btn-success" id="start" onclick="startTimer()">Start</button>
+    <button type="button" class="btn btn-danger" id="stop" onclick="stopTimer()">Stop</button>
+    <button type="button" class="btn btn-secondary" id="reset" onclick="resetTimer()">Reset</button><br><br>
+  </p>
+  <p><button type="button" class="btn btn-primary" id="clear" onclick="clearTable()">Clear the Table</button><br><br></p>
+    <table class="table table-striped table-hover table-bordered">
+  <thead class="thead-dark" id="spreadsheet">
+    <tr>
+      <th>#</th>
+      <th>Student Name</th>
+      <th><a href="#" onclick="distOne()" style="color: white">200m</a></th>
+      <th><a href="#" onclick="distTwo()" style="color: white">400m</a></th>
+      <th><a href="#" onclick="distThree()" style="color: white">800m</a></th>
+      <th><a href="#" onclick="distFour()" style="color: white">1600m</a></th>
+      <th><a href="#" onclick="distFive()" style="color: white">3200m</a></th>
+      <th><a href="#" onclick="distSix()" style="color: white">5000m</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-active">
+      <td>1</td>
+      <td><a href="#" id="stud1" onClick="split(0)">Student 1</a></td>
+      <td><strong id="200-1"></strong></td>
+      <td><strong id="400-1"></strong></td>
+      <td><strong id="800-1"></strong></td>
+      <td><strong id="1600-1"></strong></td>
+      <td><strong id="3200-1"></strong></td>
+      <td><strong id="5k-1"></strong></td>
+    </tr>
+    <tr class="table-active">
+      <td>2</td>
+      <td><a href="#" id="stud2" onClick="split(1)">Student 2</a></td>
+      <td><strong id="200-2"></strong></td>
+      <td><strong id="400-2"></strong></td>
+      <td><strong id="800-2"></strong></td>
+      <td><strong id="1600-2"></strong></td>
+      <td><strong id="3200-2"></strong></td>
+      <td><strong id="5k-2"></strong></td>
+    </tr>
+    <tr class="table-active">
+      <td>3</td>
+      <td><a href="#" id="stud3" onClick="split(2)">Student 3</a></td>
+      <td><strong id="200-3"></strong></td>
+      <td><strong id="400-3"></strong></td>
+      <td><strong id="800-3"></strong></td>
+      <td><strong id="1600-3"></strong></td>
+      <td><strong id="3200-3"></strong></td>
+      <td><strong id="5k-3"></strong></td>
+    </tr>
+    <tr class="table-active">
+      <td>4</td>
+      <td><a href="#" id="stud4" onClick="split(3)">Student 4</a></td>
+      <td><strong id="200-4"></strong></td>
+      <td><strong id="400-4"></strong></td>
+      <td><strong id="800-4"></strong></td>
+      <td><strong id="1600-4"></strong></td>
+      <td><strong id="3200-4"></strong></td>
+      <td><strong id="5k-4"></strong></td>
+    </tr>
+    <tr class="table-active">
+      <td>5</td>
+      <td><a href="#" id="stud5" onClick="split(4)">Student 5</a></td>
+      <td><strong id="200-5"></strong></td>
+      <td><strong id="400-5"></strong></td>
+      <td><strong id="800-5"></strong></td>
+      <td><strong id="1600-5"></strong></td>
+      <td><strong id="3200-5"></strong></td>
+      <td><strong id="5k-5"></strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<footer>
+  <h6>Made by Ryan James</h6>
+</footer>
+</body>
+</html>
